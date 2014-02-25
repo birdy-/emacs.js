@@ -12,6 +12,8 @@
 (setq create-lockfiles nil)
 
 (setq-default truncate-lines nil)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 (setq visible-bell t
       column-number-mode t
@@ -21,13 +23,16 @@
       transient-mark-mode t
       color-theme-is-global t
       shift-select-mode nil
-      mouse-yank-at-point t
+      mouse-yank-at-click t
       require-final-newline t
       truncate-partial-width-windows nil
       delete-by-moving-to-trash nil
       uniquify-buffer-name-style 'forward
       ediff-window-setup-function 'ediff-setup-windows-plain
-      xterm-mouse-mode t)
+      xterm-mouse-mode t
+      inhibit-startup-message t
+      initial-scratch-message nil
+      indent-line-function 'insert-tab)
 
 (setq locale-coding-system 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -66,3 +71,5 @@
       (widen)
       (goto-char (point-max))
       (delete-blank-lines))))
+
+(delete-selection-mode 1)
