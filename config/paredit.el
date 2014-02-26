@@ -6,3 +6,4 @@
   '(define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp))
 
 (require 'paredit)
+(windmove-default-keybindings)   ; Move between frames with Shift+arrow

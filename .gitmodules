@@ -55,3 +55,6 @@
 [submodule "libs/clojure-mode"]
 	path = libs/clojure-mode
 	url = https://github.com/clojure-emacs/clojure-mode.git
+[submodule "libs/fill-column-indicator"]
+	path = libs/fill-column-indicator
+	url = https://github.com/alpaker/Fill-Column-Indicator.git

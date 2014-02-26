@@ -4,12 +4,12 @@
 (global-set-key (kbd "M-g u") 'undo)
 (global-set-key (kbd "M-g r") 'redo)
 
-(global-set-key "\C-w" 'backward-kill-word)
+;;(global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
-(global-set-key [left] 'undo)
-(global-set-key [right] 'redo)
+;;(global-set-key [left] 'undo)
+;;(global-set-key [right] 'redo)
 
 (define-key input-decode-map "\e\eOA" [(meta up)])
 (define-key input-decode-map "\e\eOB" [(meta down)])
