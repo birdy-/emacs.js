@@ -13,14 +13,14 @@
 ;;set cursor colour
 (set-cursor-color "yellow")
 
-(add-hook 'js-mode-hook '(lambda ()
-                           (highlight-lines-matching-regexp ".\{86\}" "hi-blue-b")
-                           (setq fill-column 86)
+(add-hook 'js2-mode-hook '(lambda ()
+                            (setq fill-column 80)
+                            (highlight-lines-matching-regexp ".\\{81\\}" "hi-blue-b")
                            )
           )
 
 (add-hook 'python-mode-hook '(lambda ()
-                           (highlight-lines-matching-regexp ".\{80\}" "hi-blue-b")
-                           (setq fill-column 80)
+                               (setq fill-column 80)
+                               (highlight-lines-matching-regexp ".\\{81\\}" "hi-blue-b")
                            )
           )
