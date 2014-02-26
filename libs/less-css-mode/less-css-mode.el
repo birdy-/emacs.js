@@ -54,7 +54,7 @@
   (list
    ;; Selectors
    (list "^[ \t]*\\([^\n;:{}()]*\\){?$" 1 font-lock-keyword-face)
-   
+
    ;; Properties
    (list "\\(\\w+\\)[ \t]*:" 1 font-lock-variable-name-face)
 
@@ -88,11 +88,14 @@
 
 (defun less-css-calculate-indentation ()
   "Return the column to which the current line should be indented."
-  (save-excursion
-    (beginning-of-line)
-    (let ((indent-level 0))
+  (let ((indent-level 0))
+    (save-excursion
+      (end-of-line)
+      (while (not (bolp))
+        (backward-char)
+        (cond ((looking-at "}") (setq indent-level (- indent-level 1)))))
+      (beginning-of-line)
       (while (not (bobp))
-        ;; TODO search backwards
         (backward-char)
         (cond ((looking-at "{") (setq indent-level (+ 1 indent-level)))
               ((looking-at "}") (setq indent-level (- indent-level 1)))))
