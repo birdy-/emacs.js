@@ -33,6 +33,7 @@
 
 (load-profile "default")
 (load-profile "js")
+(load-profile "less")
 (load-profile "coffee")
 (load-profile "golang")
 (load-profile "clojure")
