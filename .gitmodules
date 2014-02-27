@@ -58,3 +58,6 @@
 [submodule "libs/fill-column-indicator"]
 	path = libs/fill-column-indicator
 	url = https://github.com/alpaker/Fill-Column-Indicator.git
+[submodule "libs/jshint-mode"]
+	path = libs/jshint-mode
+	url = https://github.com/daleharvey/jshint-mode.git
