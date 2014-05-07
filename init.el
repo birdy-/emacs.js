@@ -5,6 +5,13 @@
 (defconst +emacs-conf-dir+ (concat +emacs-dir+ "/config"))
 (defconst +emacs-tmp-dir+ (concat +emacs-dir+ "/tmp"))
 
+(setq backup-directory-alist
+      `((".*" . ,+emacs-tmp-dir+)))
+(setq auto-save-file-name-transforms
+      `((".*" ,+emacs-tmp-dir+ t)))
+(setq auto-save-list-file-prefix
+      +emacs-tmp-dir+)
+
 ;; new projects will be created under this directory
 (defconst +dev-dir+ (concat +home-dir+ "/dev"))
 
