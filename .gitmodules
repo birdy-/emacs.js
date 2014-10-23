@@ -61,3 +61,9 @@
 [submodule "libs/jshint-mode"]
 	path = libs/jshint-mode
 	url = https://github.com/daleharvey/jshint-mode.git
+[submodule "libs/sass-mode"]
+	path = libs/sass-mode
+	url = https://github.com/nex3/sass-mode.git
+[submodule "libs/haml-mode"]
+	path = libs/haml-mode
+	url = https://github.com/nex3/haml-mode.git

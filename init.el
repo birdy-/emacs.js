@@ -41,6 +41,7 @@
 (load-profile "default")
 (load-profile "js")
 (load-profile "less")
+(load-profile "sass")
 (load-profile "coffee")
 (load-profile "golang")
 (load-profile "clojure")

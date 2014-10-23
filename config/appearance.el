@@ -65,3 +65,18 @@ argument is given, you can choose which register to jump to."
                 'th-save-frame-configuration)
 (global-set-key (kbd "<f6>")
                 'th-jump-to-register)
+
+;adjust font to current screen size
+(defun fontify-frame (frame)
+(interactive)
+(if window-system
+(progn
+(if (> (x-display-pixel-width) 2000)
+(set-frame-parameter frame 'font "DejaVu Sans Mono 18") ;; Cinema Display
+(set-frame-parameter frame 'font "DejaVu Sans Mono 14")))))
+
+;; Fontify current frame
+(fontify-frame nil)
+
+;; Fontify any future frames
+(push 'fontify-frame after-make-frame-functions)
